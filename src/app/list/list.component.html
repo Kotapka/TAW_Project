@@ -1,0 +1,19 @@
+<h2>Here is your List</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Entry</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of listEntries; let i = index">
+            <th>{{list.date}}</th>
+            <th>{{list.entry}}</th> 
+            <th> 
+                <button class="btn btn-light" (click)="onEdit(list.id)">Edit</button>   
+                <button class="btn btn-danger" (click)="onDelete(list.id)">Delete</button></th>
+        </tr>
+    </tbody>
+</table>
